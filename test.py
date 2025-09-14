@@ -205,7 +205,7 @@ class Runner:
 
 # Parse args.
 ap = argparse.ArgumentParser(
-        prog="Startest", description="Startest - A simple test framework by Stardust.")
+        prog="Startest", description="Startest - A tiny yet flexible test runner by Stardust.")
 ap.add_argument("-c", "--config",
                 type=str,
                 default="./tests.toml",
