@@ -1,0 +1,2 @@
+# Print stdout.
+print("Hello!!");

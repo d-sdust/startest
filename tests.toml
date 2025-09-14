@@ -1,0 +1,67 @@
+# General runner config.
+[startest]
+# Base test directory. 
+#
+# Will search here until other explicitly specified.
+# 
+# (Default: `./tests`)
+dir = "./tests"
+# Test runner.
+# 
+# Example, if your tests are python 
+# (imagine you do not know shebang), you need to run them 
+# with `python3`.
+#
+# Runners may also be overridden for a specific test.
+# 
+# (Default: `""`)
+runner = "python3"
+
+# A test.
+# 
+# Will run `./test/test1.py`.
+[[test]]
+# File name relative to `startest.dir`.
+file = "test1.py"
+
+# Override path.
+# 
+# If the new path is relative, it is relative to your PWD,
+# but not a	`startest.dir`.
+#
+# This entry will run `./python-tests/test2.py`.
+[[test]]
+path = "./python-tests/test2.py"
+
+# Other options.
+[[test]]
+file = "test-all.py"
+# Pass extra flags to a test.
+# 
+# (Default: `[]`)
+flags = [ "--verbose", "--with-proxy", "127.0.0.1:8000" ]
+# Filter printing out tests's stdout/stderr.
+#
+# The string syntax is `<stdout-filter>/<stderr-filter>`.
+#
+# The default value is `fail/fail`.
+#
+# The filter may be one of:
+# - `ok` - Print on OK test result.
+# - `fail` - Print on fail result.
+# - `both` - Print in both cases.
+# - `never` - Do not print.
+# 
+# (Default: `"fail/fail"`)
+print = "both/fail"
+# You can also specify a runner for your test.
+# 
+# (Default: `""`)
+runner = "python3"
+# Treat other exit code as OK.
+#
+# This test will exit successfully in case of code 1,
+# but fail with code 0 and others.
+# 
+# (Default: `0`)
+ok = 1

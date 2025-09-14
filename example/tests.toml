@@ -1,0 +1,24 @@
+[startest]
+runner = "python3"
+
+[[test]]
+file = "basic.py"
+
+[[test]]
+file = "exit-1.py"
+ok = 1
+
+[[test]]
+file = "show-out.py"
+print = "both/fail"
+
+[[test]]
+path = "./foreign-test.py"
+
+[[test]]
+file = "print-arg.py"
+print = "both/fail"
+flags = [ "hello" ]
+
+[[test]]
+file = "fails.py"
